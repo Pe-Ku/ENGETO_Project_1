@@ -72,11 +72,14 @@ for clean_word in clean_words:
         lower_words += 1
     elif clean_word.isnumeric():
         num_strings.append(int(clean_word))
-print(f'There are {title_words} titlecase words.')
-print(f'There are {upper_words} uppercase words.')
-print(f'There are {lower_words} lowercase words.')
-print(f'There are {len(num_strings)} numeric strings.')
-print(f'The sum of all numbers {sum(num_strings)}.')
+print(
+    f'There are {title_words} titlecase words.',
+    f'There are {upper_words} uppercase words.',
+    f'There are {lower_words} lowercase words.',
+    f'There are {len(num_strings)} numeric strings.',
+    f'The sum of all numbers {sum(num_strings)}.',
+    sep = "\n"
+)
 
 # stats - occurrences
 for clean_word in clean_words:
@@ -86,8 +89,11 @@ for clean_word in clean_words:
     else:
         words_dict[length_word] += 1
 sorted_dict = {key: words_dict[key] for key in sorted(words_dict.keys())}
-print(separator)
-print(f'{"LEN":>3}|{"OCCURRENCES":^18}|{"NR.":<3}')
-print(separator)
+print(
+    separator,
+    f'{"LEN":>3}|{"OCCURRENCES":^18}|{"NR.":<3}',
+    separator,
+    sep = "\n"
+)
 for x, y in sorted_dict.items():
     print(f'{x:>3}|{(y*"*"):<18}|{y:<3}')
