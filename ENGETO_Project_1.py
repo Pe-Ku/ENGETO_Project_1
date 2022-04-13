@@ -1,5 +1,7 @@
 """
 author = Peter Kubovcik
+email = peter.kubovcik@gmail.com
+Discord = Peter5#2544
 """
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
